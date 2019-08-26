@@ -1,4 +1,4 @@
-package InsertSort;
+package sort;
 
 import java.util.Arrays;
 
@@ -18,7 +18,7 @@ public class InsertSort {
             tmp=arr[i];
             //前i个元素为已排序序列，从后往前遍历已排序序列
             //升序，待排序数据小于已排序序列的值时，后移一位，不小于时进行插入
-            for(j=i;j>0&&tmp<arr[j-1];j--){
+            for(j=i;j>=1&&tmp<arr[j-1];j--){
                 arr[j]=arr[j-1];
             }
             arr[j]=tmp;
