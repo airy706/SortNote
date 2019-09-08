@@ -7,14 +7,16 @@ public class SimQuickSort {
         if(arr.length<=1||begin<0||end>=arr.length||begin>end){
             return;
         }
-        int pivot= arr[begin];
+
+        int index= (int) (begin+Math.random()*(end-begin+1));
+        swap(arr,index,begin);
 
         int i=begin,j=end;
         for(;;){
-            while(arr[j]>=pivot&&i<j){
+            while(arr[j]>=arr[begin]&&i<j){
                 j--;
             }
-            while(arr[i]<=pivot&&i<j){
+            while(arr[i]<=arr[begin]&&i<j){
                 i++;
             }
             if(i<j){
